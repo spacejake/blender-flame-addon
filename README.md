@@ -1,4 +1,4 @@
-# blender-flame-addon
+# Blender FLAME Addon
 This blender add-on for is for tools using the FLAME Face model [\[1\]](#references). Currently, a Python 3.x fork of the [flame-fitting](https://github.com/spacejake/flame-fitting) code is used as a library for accessing the pre-trained model. The pretrained model is available for research purposes after registering at the [FLAME project](http://flame.is.tue.mpg.de) page.
   
 This add-on is also incomplete and initially just a starting point to use Blender as a visualization tool for the Flame model. We will be adding tools as we work.
@@ -49,7 +49,11 @@ Lastly, install opencv for python.
 # Installing Flame add-on
 The issue is resolving the [flame-fitting](https://github.com/spacejake/flame-fitting) module. Blender has a folder where you can put module dependencies, aptly named modules. This is where to put the flame resource, but must first put `__init__.py` in the root dir of the flame module so python can read the it as a whole lib. This will prevent needing to sys.path.append() to access the module.
   
-You can use the scripts directory in the Blender install, where the `addons` dir holds the blender add-on, and the `modules` dir holds the flame module. However, blender provides the option of using an external scripts dir. I prefer this, as I like to work outside of the application’s install dir.
+You can use the scripts directory in the Blender install the add-on. 
+* Put the Blander FLAME addon dir (mesh_flame) where the `addons`. 
+* Put the [flame-fitting](https://github.com/spacejake/flame-fitting) module in the `modules` dir. 
+  
+However, blender provides the option of using an external scripts dir. I prefer this, as I like to work outside of the application’s install dir.
   
 In order to use an external scripts dir:
 * Ext. scripts Directory must contain 3 sub-directories : `addons`, `modules`, and `startup`.
