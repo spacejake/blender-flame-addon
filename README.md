@@ -3,6 +3,8 @@ This blender add-on for is for tools using the FLAME Face model [\[1\]](#referen
   
 This add-on is also incomplete and initially just a starting point to use Blender as a visualization tool for the Flame model. We will be adding tools as we work.
 
+![Screenshot](docs/imgs/flame_addon_demo_scrn.png)
+
 # Blender Setup
 The Blender python distribution will need some dependancies installed. We will install these using PyPi and PIP. We only provide instructions for windows.
   
@@ -55,6 +57,8 @@ You can use the scripts directory in the Blender install the add-on.
   
 However, blender provides the option of using an external scripts dir. I prefer this, as I like to work outside of the application’s install dir.
   
+![Screenshot](docs/imgs/ext_scripts_scrn.png)
+  
 In order to use an external scripts dir:
 * Ext. scripts Directory must contain 3 sub-directories : `addons`, `modules`, and `startup`.
 * Go to User Preferences, tab File, and specify a custom extra folder for scripts, in the scripts input location of the external scripts dir.
@@ -63,6 +67,9 @@ Further, I also like to use symlinks, so I created one to the repo's module mesh
 ``` bash
 mklink /d "D:\Jake\blender-addons\addons\mesh_flame" "D:\Jake\blender-addons\dev\blender-flame-addon\mesh_flame"
 ```
+
+Add the mesh_flame addon normally in Blender
+![Screenshot](docs/imgs/flame_addon_scrn.png)
 
 # References
 1. Tianye Li*, Timo Bolkart*, Michael J. Black, Hao Li, and Javier Romero, Learning a model of facial shape and expression from 4D scans, ACM Transactions on Graphics (Proc. SIGGRAPH Asia) 2017
