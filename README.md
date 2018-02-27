@@ -49,7 +49,7 @@ Lastly, install opencv for python.
 ```
 
 # Installing Flame add-on
-The issue is resolving the [flame-fitting](https://github.com/spacejake/flame-fitting) module. Blender has a folder where you can put module dependencies, aptly named modules. This is where to put the flame resource, but must first put `__init__.py` in the root dir of the flame module so python can read the it as a whole lib. This will prevent needing to sys.path.append() to access the module.
+The issue is resolving the [flame-fitting](https://github.com/spacejake/flame-fitting) module. Blender has a folder where you can put module dependencies, aptly named modules. This is where to put the flame resource, but must first put `__init__.py` in the root dir of the flame module so python can read the it as a whole lib. This will prevent needing to sys.path.append() to access the module. You also have to rename the directory name `flame-fitting` to `flame_fitting`.
   
 You can use the scripts directory in the Blender install the add-on. 
 * Put the Blander FLAME addon dir (mesh_flame) where the `addons`. 
@@ -70,6 +70,7 @@ mklink /d "D:\Jake\blender-addons\addons\mesh_flame" "D:\Jake\blender-addons\dev
 
 Add the mesh_flame addon normally in Blender
 ![Screenshot](docs/imgs/flame_addon_scrn.png)
+
 
 # References
 1. Tianye Li*, Timo Bolkart*, Michael J. Black, Hao Li, and Javier Romero, Learning a model of facial shape and expression from 4D scans, ACM Transactions on Graphics (Proc. SIGGRAPH Asia) 2017
