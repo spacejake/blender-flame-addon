@@ -49,19 +49,21 @@ Lastly, install opencv for python.
 ```
 
 # Installing Flame add-on
-The issue is resolving the [flame-fitting](https://github.com/spacejake/flame-fitting) module. Blender has a folder where you can put module dependencies, aptly named modules. This is where to put the flame resource, but must first put `__init__.py` in the root dir of the flame module so python can read the it as a whole lib. This will prevent needing to sys.path.append() to access the module. You also have to rename the directory name `flame-fitting` to `flame_fitting`.
+The issue is resolving the [flame-fitting](https://github.com/spacejake/flame-fitting) module. Blender has a folder where you can put module dependencies, aptly named `modules`. This is where to put the flame resource. First we must convert the flame-fitting source into a python module to prevent needing to use sys.path.append() to access the module.
+* Rename the directory name __flame-fitting__ to __flame_fitting__
+* Add `__init__.py` in the root dir of the flame module so python can read the it as a whole lib.  
   
 You can use the scripts directory in the Blender install the add-on. 
-* Put the Blander FLAME addon dir (mesh_flame) where the `addons`. 
-* Put the [flame-fitting](https://github.com/spacejake/flame-fitting) module in the `modules` dir. 
+* Put the Blander FLAME addon dir (mesh_flame) in the `addons` dir. 
+* Put the [flame_fitting](https://github.com/spacejake/flame-fitting) module in the `modules` dir. 
   
 However, blender provides the option of using an external scripts dir. I prefer this, as I like to work outside of the application’s install dir.
   
-![Screenshot](docs/imgs/ext_scripts_scrn.png)
-  
 In order to use an external scripts dir:
-* Ext. scripts Directory must contain 3 sub-directories : `addons`, `modules`, and `startup`.
+* The ext. scripts Directory must contain 3 sub-directories : `addons`, `modules`, and `startup`.
 * Go to User Preferences, tab File, and specify a custom extra folder for scripts, in the scripts input location of the external scripts dir.
+  
+![Screenshot](docs/imgs/ext_scripts_scrn.png)
   
 Further, I also like to use symlinks, so I created one to the repo's module mesh-flame.
 ``` bash
